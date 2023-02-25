@@ -1,0 +1,300 @@
+
+/* Bagian 1 */
+/* .container {
+    display: flex;
+    flex-direction: row | row-reverse | column | column-reverse;
+    flex-wrap: nowrap | wrap | wrap-reverse;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-end
+
+}
+
+.container div {
+    flex: 1;
+}
+
+.container div .satu {
+    flex: 2;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Bagian 2 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: #ddd;
+    line-height: 1.65;
+    padding-bottom: 500px;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    background-color: rebeccapurple;
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    height: 60px;
+    align-items: center;
+    color: rgb(205, 163, 205);
+    z-index: 2;
+}
+
+nav .logo {
+    letter-spacing: 0.5px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: .9em;
+}
+
+nav ul li a:hover {
+    color: rgb(205, 163, 205);
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 15px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 30px;
+    height: 25px;
+    opacity: 0;
+    top: -5px;
+    left: -2px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(205, 163, 205);
+    border-radius: 3px;
+    transition: all .5s;
+}
+
+/* Hamburger Animation */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:last-child {
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-2px, -2px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.menu-toggle input:checked ~ span:last-child {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 1px);
+}
+
+/* Responsive Breakpoint */
+
+/* Table */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+    /* .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        background-color: rgb(205, 163, 205);
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: all .5s;
+        z-index: -1;
+    }
+
+    nav ul.slide {
+        transform: translateX(0);
+    } */
+}
+
+/* ===================== */
+
+/* Latihan 1 */
+.container-satu {
+    width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.kolom-utama {
+    flex: 3;
+    order: 2;
+}
+
+.sidebar-satu {
+    flex: 1;
+    order: 1;
+}
+
+.sidebar-satu ul {
+    list-style: none;
+}
+
+.sidebar-dua {
+    flex: 1;
+    order: 3;
+}
+
+/* Latihan 2 */
+.container-dua {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.layanan {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.layanan.satu {
+    background-color: blue;
+}
+
+.layanan.dua {
+    background-color: green;
+}
+
+.layanan.tiga {
+    background-color: red;
+}
+
+/* Latihan 3 */
+.container-tiga {
+    width: 800px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: inherit;
+    justify-content: center;
+}
+
+.thumbnail {
+    width: 50%;
+}
+
+
+.thumbnail img{
+    width: 100%;
+}
+
+/* Latihan 4 */
+.container-empat {
+    width: 800px;
+    margin: 50px auto;
+    overflow: hidden;
+    display: flex;
+}
+
+.card {
+    border: 1px solid #aaa;
+    background-color: #aaa;
+    border-radius: 10px;
+    margin: 10px;
+    flex: 1;
+}
+
+.card .header {
+    height: 150px;
+    background-color: #666;
+}
+
+.card .content {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.card.besar {
+    transform: scale(1.12);
+}
+
+/* Latihan 5 */
+.container-lima {
+    width: 500px;
+    height: 500px;
+    margin: 50px auto;
+    border: 5px solid black;
+    display: flex;
+}
+
+.kotak {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    text-align: center;
+    color: white;
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+
+.kotak span {
+    margin: auto;
+}
+
+
+/* Responsive */
+@media (min-width: 600px) {
+    .container-dua {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .layanan {
+        width: 30%;
+        margin-bottom: 20px;
+    }
+
+    .thumbnail {
+        width: 25%;
+    }
+}
+
